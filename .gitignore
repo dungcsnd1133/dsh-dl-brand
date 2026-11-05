@@ -20,3 +20,4 @@ node_modules/
 # install. The Vietnamese dictionaries in src/dicts/vi/ are the texts this
 # package actually distributes.
 reference/en/
+.push.sh
