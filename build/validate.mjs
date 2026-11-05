@@ -34,6 +34,16 @@ let totalKeys = 0
 let totalTranslated = 0
 const rows = []
 
+if (!fs.existsSync(REF)) {
+  console.log(
+    'Thiếu reference/en/ — thư mục này không nằm trong repo (xem LICENSE).\n' +
+    'Tạo lại từ DSH đã cài, rồi chạy lại:\n\n' +
+    '  node reference/extract.mjs\n\n' +
+    'Nếu DSH ở chỗ lạ: DSH_MODULES=<dsh-install>/lib/node_modules/@deepseek-ai/dsh/node_modules/@deepseek-ai node reference/extract.mjs',
+  )
+  process.exit(1)
+}
+
 const refNamespaces = fs.readdirSync(REF).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''))
 const viNamespaces = fs.existsSync(VI) ? fs.readdirSync(VI).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, '')) : []
 
