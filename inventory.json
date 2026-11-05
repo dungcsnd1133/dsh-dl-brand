@@ -1,0 +1,227 @@
+{
+  "dsh-client-ui-action-cards": {
+    "package": "dsh-client-ui-action-cards",
+    "keys": 14,
+    "file": "en/dsh-client-ui-action-cards.json"
+  },
+  "approval": {
+    "package": "dsh-client-ui-approval",
+    "keys": 7,
+    "file": "en/approval.json"
+  },
+  "chat": {
+    "package": "dsh-client-ui-chat",
+    "keys": 195,
+    "file": "en/chat.json"
+  },
+  "cordis": {
+    "package": "dsh-client-ui-cordis",
+    "keys": 51,
+    "file": "en/cordis.json"
+  },
+  "dsh-client-ui-creation-recommendations": {
+    "package": "dsh-client-ui-creation-recommendations",
+    "keys": 55,
+    "file": "en/dsh-client-ui-creation-recommendations.json"
+  },
+  "deliverables": {
+    "package": "dsh-client-ui-deliverables",
+    "keys": 57,
+    "file": "en/deliverables.json"
+  },
+  "dsh-client-ui-entry-customization": {
+    "package": "dsh-client-ui-entry-customization",
+    "keys": 5,
+    "file": "en/dsh-client-ui-entry-customization.json"
+  },
+  "dsh-client-ui-file-actions": {
+    "package": "dsh-client-ui-file-actions",
+    "keys": 12,
+    "file": "en/dsh-client-ui-file-actions.json"
+  },
+  "dsh-client-ui-file-drag": {
+    "package": "dsh-client-ui-file-drag",
+    "keys": 1,
+    "file": "en/dsh-client-ui-file-drag.json"
+  },
+  "goal": {
+    "package": "dsh-client-ui-goal",
+    "keys": 12,
+    "file": "en/goal.json"
+  },
+  "dsh-client-ui-input-trigger": {
+    "package": "dsh-client-ui-input-trigger",
+    "keys": 9,
+    "file": "en/dsh-client-ui-input-trigger.json"
+  },
+  "dsh-client-ui-jobs": {
+    "package": "dsh-client-ui-jobs",
+    "keys": 40,
+    "file": "en/dsh-client-ui-jobs.json"
+  },
+  "dsh-client-ui-layout": {
+    "package": "dsh-client-ui-layout",
+    "keys": 1,
+    "file": "en/dsh-client-ui-layout.json"
+  },
+  "feedback": {
+    "package": "dsh-client-ui-message-feedback",
+    "keys": 20,
+    "file": "en/feedback.json"
+  },
+  "model": {
+    "package": "dsh-client-ui-model-selection",
+    "keys": 23,
+    "file": "en/model.json"
+  },
+  "dsh-client-ui-permission-presets": {
+    "package": "dsh-client-ui-permission-presets",
+    "keys": 12,
+    "file": "en/dsh-client-ui-permission-presets.json"
+  },
+  "plan": {
+    "package": "dsh-client-ui-plan",
+    "keys": 16,
+    "file": "en/plan.json"
+  },
+  "dsh-client-ui-plugin-manager": {
+    "package": "dsh-client-ui-plugin-manager",
+    "keys": 291,
+    "file": "en/dsh-client-ui-plugin-manager.json"
+  },
+  "dsh-client-ui-plugin-market": {
+    "package": "dsh-client-ui-plugin-market",
+    "keys": 87,
+    "file": "en/dsh-client-ui-plugin-market.json"
+  },
+  "dsh-client-ui-plugin-recommendations": {
+    "package": "dsh-client-ui-plugin-recommendations",
+    "keys": 25,
+    "file": "en/dsh-client-ui-plugin-recommendations.json"
+  },
+  "reference": {
+    "package": "dsh-client-ui-reference",
+    "keys": 15,
+    "file": "en/reference.json"
+  },
+  "dsh-client-ui-secret-mask": {
+    "package": "dsh-client-ui-secret-mask",
+    "keys": 2,
+    "file": "en/dsh-client-ui-secret-mask.json"
+  },
+  "dsh-client-ui-settings-agent-loop": {
+    "package": "dsh-client-ui-settings-agent-loop",
+    "keys": 12,
+    "file": "en/dsh-client-ui-settings-agent-loop.json"
+  },
+  "settings": {
+    "package": "dsh-client-ui-settings-general",
+    "keys": 42,
+    "file": "en/settings.json"
+  },
+  "settings.models": {
+    "package": "dsh-client-ui-settings-models",
+    "keys": 137,
+    "file": "en/settings.models.json"
+  },
+  "dsh-client-ui-settings-plugin-inventory": {
+    "package": "dsh-client-ui-settings-plugin-inventory",
+    "keys": 37,
+    "file": "en/dsh-client-ui-settings-plugin-inventory.json"
+  },
+  "settings.plugins": {
+    "package": "dsh-client-ui-settings-plugins",
+    "keys": 5,
+    "file": "en/settings.plugins.json"
+  },
+  "dsh-client-ui-settings-session-log": {
+    "package": "dsh-client-ui-settings-session-log",
+    "keys": 4,
+    "file": "en/dsh-client-ui-settings-session-log.json"
+  },
+  "settings.shell": {
+    "package": "dsh-client-ui-settings-shell",
+    "keys": 14,
+    "file": "en/settings.shell.json"
+  },
+  "settings.subagent": {
+    "package": "dsh-client-ui-settings-subagent",
+    "keys": 35,
+    "file": "en/settings.subagent.json"
+  },
+  "dsh-client-ui-settings-web-search": {
+    "package": "dsh-client-ui-settings-web-search",
+    "keys": 27,
+    "file": "en/dsh-client-ui-settings-web-search.json"
+  },
+  "dsh-client-ui-shortcuts": {
+    "package": "dsh-client-ui-shortcuts",
+    "keys": 56,
+    "file": "en/dsh-client-ui-shortcuts.json"
+  },
+  "sidebar": {
+    "package": "dsh-client-ui-sidebar",
+    "keys": 8,
+    "file": "en/sidebar.json"
+  },
+  "dsh-client-ui-sidebar-browser": {
+    "package": "dsh-client-ui-sidebar-browser",
+    "keys": 26,
+    "file": "en/dsh-client-ui-sidebar-browser.json"
+  },
+  "dsh-client-ui-sidebar-documentpreview": {
+    "package": "dsh-client-ui-sidebar-documentpreview",
+    "keys": 15,
+    "file": "en/dsh-client-ui-sidebar-documentpreview.json"
+  },
+  "dsh-client-ui-sidebar-files": {
+    "package": "dsh-client-ui-sidebar-files",
+    "keys": 21,
+    "file": "en/dsh-client-ui-sidebar-files.json"
+  },
+  "dsh-client-ui-sidebar-right": {
+    "package": "dsh-client-ui-sidebar-right",
+    "keys": 38,
+    "file": "en/dsh-client-ui-sidebar-right.json"
+  },
+  "dsh-client-ui-sidebar-terminal": {
+    "package": "dsh-client-ui-sidebar-terminal",
+    "keys": 28,
+    "file": "en/dsh-client-ui-sidebar-terminal.json"
+  },
+  "skill": {
+    "package": "dsh-client-ui-skill",
+    "keys": 8,
+    "file": "en/skill.json"
+  },
+  "subagent": {
+    "package": "dsh-client-ui-subagent",
+    "keys": 42,
+    "file": "en/subagent.json"
+  },
+  "dsh-client-ui-theme": {
+    "package": "dsh-client-ui-theme",
+    "keys": 25,
+    "file": "en/dsh-client-ui-theme.json"
+  },
+  "trajectory": {
+    "package": "dsh-client-ui-trajectory",
+    "keys": 199,
+    "file": "en/trajectory.json"
+  },
+  "question": {
+    "package": "dsh-client-ui-user-questions",
+    "keys": 31,
+    "file": "en/question.json"
+  },
+  "dsh-client-ui-workflow-run": {
+    "package": "dsh-client-ui-workflow-run",
+    "keys": 18,
+    "file": "en/dsh-client-ui-workflow-run.json"
+  },
+  "workspace": {
+    "package": "dsh-client-ui-workspace",
+    "keys": 119,
+    "file": "en/workspace.json"
+  }
+}

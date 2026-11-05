@@ -4,6 +4,7 @@
 // evaluated with its referenced constants stubbed where needed.
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 /**
  * Locate the installed DSH client packages.
@@ -90,7 +91,10 @@ function findDshModules() {
 }
 
 const BASE = findDshModules()
-const OUT = path.resolve('en')
+// Always write beside this script, never beside the caller's cwd: the documented
+// invocation is from the repo root, where a cwd-relative 'en/' would land in the
+// wrong place and leave reference/en/ missing.
+const OUT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'en')
 fs.mkdirSync(OUT, { recursive: true })
 
 function braceEnd(s, start) {
