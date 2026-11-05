@@ -1,0 +1,14 @@
+{
+  "phase.active": "Mục tiêu đang chạy",
+  "phase.active.disarmed": "Mục tiêu chưa kích hoạt",
+  "phase.paused": "Mục tiêu đã tạm dừng",
+  "phase.blocked": "Mục tiêu bị chặn",
+  "objective.aria": "Nội dung mục tiêu",
+  "commandInput.aria": "Ô nhập lệnh",
+  "action.save": "Lưu mục tiêu",
+  "action.cancel": "Huỷ chỉnh sửa",
+  "action.pause": "Tạm dừng mục tiêu",
+  "action.resume": "Tiếp tục mục tiêu",
+  "action.edit": "Sửa mục tiêu",
+  "action.clear": "Xoá mục tiêu"
+}

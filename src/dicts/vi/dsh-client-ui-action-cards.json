@@ -1,0 +1,16 @@
+{
+  "expandBrief": "Xem thêm",
+  "collapseBrief": "Thu gọn",
+  "dismiss": "Để sau",
+  "dismissed": "Đã bỏ qua",
+  "replaced": "Đã thay thế",
+  "unavailable": "Thao tác này không khả dụng. Hãy kiểm tra plugin trong Plugin.",
+  "transport": "Không xác nhận được kết quả. Hãy kết nối lại và kiểm tra thẻ trước khi thử lại.",
+  "row.title": "Thẻ thao tác",
+  "row.preparing": "Đang chuẩn bị thẻ",
+  "row.running": "Đang đề xuất",
+  "row.ok": "Đã đề xuất",
+  "row.error": "Không hiển thị",
+  "row.stopped": "Đã ngắt",
+  "row.inspect": "Xem lệnh gọi"
+}

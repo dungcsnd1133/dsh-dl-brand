@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output is committed on purpose: DSH reads lib/client.js straight from
+# this package, so a clone without it would mount an empty plugin. Rebuild with
+# `node build/build.mjs` before committing changes to src/.
+
+# Editor and OS noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local scratch
+*.log
+*.tmp
+
+# Regenerable, and NOT ours to republish: this is a verbatim copy of DSH's own
+# English UI strings. `node reference/extract.mjs` rebuilds it from a local DSH
+# install. The Vietnamese dictionaries in src/dicts/vi/ are the texts this
+# package actually distributes.
+reference/en/

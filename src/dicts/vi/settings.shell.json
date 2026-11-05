@@ -1,0 +1,16 @@
+{
+  "title": "Shell",
+  "description": "Giới hạn thời gian chạy và lượng đầu ra của mỗi lệnh.",
+  "timeoutMs": "Thời gian chờ lệnh (ms)",
+  "timeoutMsHint": "Thời gian tối đa một lệnh được chạy trước khi bị kết thúc.",
+  "maxOutputBytes": "Giới hạn đầu ra mỗi luồng (byte)",
+  "maxOutputBytesHint": "Phần đầu ra vượt quá giới hạn sẽ được ghi ra tệp tạm thay vì bị mất.",
+  "overridden": "Bị ghi đè",
+  "reset": "Khôi phục mặc định",
+  "readOnly": "Bản triển khai này lưu cài đặt ở chế độ chỉ đọc.",
+  "unavailable": "Plugin này chưa được nạp nên hiện không thể cấu hình.",
+  "save": "Lưu",
+  "saving": "Đang lưu…",
+  "saveFailed": "Bản triển khai không chấp nhận các giá trị này; chúng được giữ lại để bạn sửa.",
+  "invalidNumber": "Nhập một số, hoặc để trống để dùng mặc định."
+}

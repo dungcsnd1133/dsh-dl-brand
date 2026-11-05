@@ -1,0 +1,23 @@
+# dsh-dl-brand — DL brand identity and Vietnamese localization for the DSH Web UI.
+#
+# A bundle patch layer, applied in `dsh.profile.bundles` order. It ships one row
+# (the client plugin itself) plus one override.
+#
+# The node half is an empty `apply`: the whole feature lives in the browser half
+# (`lib/client.js`), which fills the sidebar brand slots and adds a Vietnamese
+# locale to the catalog. The row still has to be inserted, because a bundle patch
+# only overrides rows that already exist — it never mounts a new plugin by itself.
+#
+# The official brand plugin also fills `sidebar.brand.mark` and
+# `sidebar.brand.name`. Those slots are `single`, and the renderer takes the
+# first live registration, so two occupants would be resolved by row order
+# rather than by intent. Disabling the official row makes the DL brand the only
+# occupant, which is what this layer is for. Removing this bundle from the
+# profile restores the official mark, because nothing else was edited.
+- insert:
+    - id: dl-brand
+      name: 'dsh-dl-brand'
+      config: {}
+
+- id: ui-brand-official
+  disabled: true

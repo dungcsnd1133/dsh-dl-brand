@@ -1,0 +1,7 @@
+{
+  "install": "Duyệt plugin khác",
+  "create": "Tạo plugin của bạn",
+  "createPrompt.sidebar": "Tạo plugin DSH có mục ở thanh bên trái.",
+  "createPrompt.conversation": "Tạo plugin chế độ xem hội thoại cho DSH.",
+  "createPrompt.rightbar": "Tạo plugin DSH có mục ở thanh bên phải."
+}
