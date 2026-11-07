@@ -39,6 +39,26 @@ if (!fs.existsSync(BUNDLE)) {
   process.exit(1)
 }
 
+// ── icon stub ────────────────────────────────────────────────────────────────
+// The bundle receives `document` as a load-time parameter, so the icons feature
+// can only be exercised through this object — reassigning globalThis.document
+// later has no effect. Records what applyBrandIcons left in <head>.
+const headLinks = []
+const makeHeadLink = (rel, href) => {
+	const attrs = { rel, href }
+	const node = {
+		getAttribute: (name) => attrs[name] ?? null,
+		setAttribute: (name, value) => { attrs[name] = value },
+		remove: () => { const at = headLinks.indexOf(node); if (at !== -1) headLinks.splice(at, 1) },
+	}
+	return node
+}
+headLinks.push(makeHeadLink('icon', './favicon.svg'), makeHeadLink('apple-touch-icon', './apple-touch-icon.png'))
+const stubHead = {
+	querySelectorAll: () => headLinks.slice(),
+	appendChild: (node) => { headLinks.push(node) },
+}
+
 // ── host stubs ────────────────────────────────────────────────────────────────
 const jsx = (type, props, key) => ({ type, props: { ...props, key } })
 let idSeq = 0
@@ -57,7 +77,18 @@ globalThis.window = {
     },
   },
 }
-globalThis.document = { documentElement: { lang: 'en' } }
+globalThis.document = {
+	documentElement: { lang: 'en' },
+	head: stubHead,
+	createElement: () => makeHeadLink(null, null),
+}
+// pngDataUrl builds an <img> to rasterise the apple-touch-icon. There is no DOM
+// in Node, so it is stubbed to fail: the PNG path then resolves to null and
+// leaves the existing icon, which is the documented fallback. The assertion is
+// about the SVG favicon, which needs no canvas.
+globalThis.Image = class {
+	set src(_value) { if (typeof this.onerror === 'function') this.onerror() }
+}
 
 // ── load the bundle ──────────────────────────────────────────────────────────
 const source = fs.readFileSync(BUNDLE, 'utf8')
@@ -262,6 +293,30 @@ check('registration disposers are functions', () => {
 // two-logos drift this feature exists to remove.
 check('registerBrandIcons is exported and callable', () => {
   if (typeof exports.registerBrandIcons !== 'function') throw new Error('registerBrandIcons not exported')
+})
+
+// The disposer contract. ctx.effect calls the callback ONCE and adopts its
+// return value as teardown. The first version of this feature called the
+// restore function inside the callback instead of returning it, so mount
+// swapped the icons and immediately put them back: the tab kept the default
+// logo and nothing anywhere failed.
+check('icon swap survives mount (returns a disposer, does not run it)', () => {
+	const disposers = []
+	const ctx = {
+		effect: (callback) => {
+			const teardown = callback()
+			disposers.push(teardown)
+			return teardown
+		},
+	}
+	exports.registerBrandIcons(ctx)
+	const brandIcons = headLinks.filter((link) =>
+		String(link.getAttribute('href') ?? '').startsWith('data:image/svg+xml'))
+	if (brandIcons.length === 0) {
+		throw new Error('no brand icon after mount — the swap was reverted immediately')
+	}
+	if (disposers.length === 0) throw new Error('effect registered no disposer')
+	if (disposers[0] === undefined) throw new Error('effect callback returned nothing to dispose with')
 })
 
 // ── summary ──────────────────────────────────────────────────────────────────
