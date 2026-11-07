@@ -50,7 +50,7 @@ const DL_CYAN = '#06B6D4'
  * Qwen mark in the DL gradient.
  * @param {{ size?: number }} props - requested square edge in pixels.
  */
-function DlBrandMark({ size = 24 }) {
+function DlBrandMark({ size = 24, className }) {
 	const edge = typeof size === 'number' && size > 0 ? size : 24
 	// The sidebar mounts this mark twice at once (collapsed rail and expanded
 	// row), and gradient ids are document-scoped. A shared id would make the two
@@ -63,6 +63,10 @@ function DlBrandMark({ size = 24 }) {
 		viewBox: '0 0 20 20',
 		role: 'img',
 		'aria-label': 'DL',
+		// The hero slot passes the host's own size/positioning class, and the
+		// sidebar passes none; spreading it keeps both layouts intact without
+		// this component knowing either layout.
+		className: className,
 		style: { display: 'block', flex: 'none' },
 		children: [
 			jsx.jsx('defs', {

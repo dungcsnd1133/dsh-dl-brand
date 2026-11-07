@@ -21,6 +21,16 @@ function apply(ctx) {
 		yield ctx.slots.register({ name: 'sidebar.brand.name' }, DlBrandName)
 	}))
 
+	// Hero: the empty-state screen ("Into the Unknown") carries its own brand
+	// slot, separate from the sidebar's, and it falls back to the host's whale
+	// logo. Filling only the sidebar left two different logos on the same page —
+	// the whale in the hero, ours in the sidebar — which is the mismatch this
+	// slot exists to prevent. The slot passes `size` and its own className, so
+	// the marker keeps the host's layout.
+	ctx.slots.inject('conversation.hero.brand.mark', function* () {
+		yield ctx.slots.register({ name: 'conversation.hero.brand.mark' }, DlBrandMark)
+	})
+
 	// Locale: a language pack plus its dictionaries. Failure here must not take
 	// the brand down with it, so it is isolated and only logged.
 	ctx.effect(() => {
