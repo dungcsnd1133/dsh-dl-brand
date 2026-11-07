@@ -31,9 +31,15 @@ function apply(ctx) {
 			return () => {}
 		}
 	}, 'dl-brand: vietnamese locale')
+
+	// Icons: the favicon and apple-touch-icon still showed the default DSH logo
+	// while the sidebar showed ours — two logos for one product. Swapped to the
+	// same mark, from the same geometry, so they cannot drift apart again.
+	registerBrandIcons(ctx)
 }
 
 exports.apply = apply
 exports.inject = inject
 exports.DlBrandMark = DlBrandMark
 exports.DlBrandName = DlBrandName
+exports.registerBrandIcons = registerBrandIcons

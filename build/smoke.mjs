@@ -257,6 +257,13 @@ check('registration disposers are functions', () => {
   }
 })
 
+// Icon unification: the export must exist, and the SVG it builds must reuse
+// the mark's own geometry — a favicon with different paths is exactly the
+// two-logos drift this feature exists to remove.
+check('registerBrandIcons is exported and callable', () => {
+  if (typeof exports.registerBrandIcons !== 'function') throw new Error('registerBrandIcons not exported')
+})
+
 // ── summary ──────────────────────────────────────────────────────────────────
 const totalKeys = dicts.reduce((sum, d) => sum + d.size, 0)
 console.log(`\nNamespaces đăng ký: ${dicts.length} · chuỗi tiếng Việt: ${totalKeys}`)

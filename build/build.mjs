@@ -53,6 +53,9 @@ ${indent(read('src/mark.js'), '\t\t')}
 \t\t// ── Vietnamese dictionaries (src/dicts/vi/*.json) ─────────────────────
 \t\tconst VI_DICTS = ${dictLiteral};
 
+\t\t// ── icon unification (src/favicon.js) ────────────────────────────────
+${indent(read('src/favicon.js'), '\t\t')}
+
 \t\t// ── locale registration (src/locale.js) ──────────────────────────────
 ${indent(read('src/locale.js'), '\t\t')}
 \t\t// ── plugin body (src/apply.js) ───────────────────────────────────────
